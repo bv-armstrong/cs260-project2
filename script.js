@@ -76,6 +76,7 @@ document.getElementById("gameSubmit").addEventListener("click", function(event) 
             results += '<div class="handCard" id="'+card.code+'-div"><img src="' + card.image + '" class="cardImage" id="' + card.code + '" alt="' + card.code + '"/></div>';
         }
         removeForm();
+        document.getElementById('errorMessage').innerText = '';
         refresh(deckId);
         document.getElementById("discard").addEventListener("click", function(event) {
             event.preventDefault();
@@ -207,8 +208,10 @@ function refresh(deckID) {
             if (card !== undefined) {
                 innerHTML += '<img src="' + card.image + '" class="cardImage" id="' + card.code + '" alt="' + card.code + '"/>';
             } else {
-                innerHTML += '<div class="emptyMessage"><p>(Empty)</p></div>'
+                innerHTML += '<div class="emptyMessage"><p>(Empty)</p></div>';
             }
+        } else {
+            innerHTML += '<div class="emptyMessage"><p>(Empty)</p></div>';
         }
         innerHTML += '<p>(Click to refresh)</p>';
         document.getElementById("discard").innerHTML = innerHTML;
