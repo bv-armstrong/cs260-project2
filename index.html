@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<div id="entryForms">
+  <form id="joinGameForm">
+    <label for="gameInput">Enter game ID</label>
+    <input id="gameInput" type="text"/>
+    <label for="playerNumber">Player Number (1, 2, etc.)</label>
+    <input id="playerNumber" type="number" min="1" max="6"/>
+    <input id="gameSubmit" type="submit" value="Go"/>
+  </form>
+
+  <form id="createGameForm">
+    <label for="numPlayers">Number of Players</label>
+    <input id="numPlayers" type="number" min="3" max="6"/>
+    <input id="createNewGame" type="submit" value="Create Game"/>
+  </form>
+</div>
+
+<div id="gameId"></div>
+
+<div id="discard"></div>
+<div id="clearDiscard"></div>
+
+<h2 id="errorMessage"></h2>
+<div id="cards">
+
+</div>
+
+<script src="/script.js"></script>
+
+</html>
