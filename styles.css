@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    font-size: 1.2em;
+    background-color: #015b01;
+
+}
+
+.page-container {
+    background-color: #015b01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-image: linear-gradient(to right, #333, #666);
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #383838;
+}
+
+.pageTitle {
+    font-size: 1.5em;
+    color: #e8f3f6;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#entryForms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #015b01;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    background-color: #ddd;
+    box-shadow: 5px 3px 20px gray;
+}
+
+#cards {
+    padding-right: 75px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.handCard {
+    width: 25px;
+}
+
+.handCard img:hover, .handCard img:focus, .handCard img:active {
+    box-shadow: 0 0 15px #f1f15a;
+}
+
+#errorMessage {
+    color: #960303;
+}
+
+.instructions {
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 20px;
+    background-color: #ddd;
+    box-shadow: 5px 3px 20px gray;
+    padding: 0 25px;
+}
+
+.text-input {
+    width: 150px;
+}
+
+.button {
+    font-size: 1.2em;
+    height: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #555;
+    color: #eee;
+    border-radius: 7px;
+}
+
+.button:hover {
+    background-color: #aaa;
+    color: #333;
+}
+
+.numberInput {
+    max-width: 50px;
+}
+
+label {
+    margin: 0.5em;
+}
+
+input {
+    height: 1.5em;
+    font-size: 1em;
+    margin: 0.5em;
+}
+
+#gameId {
+    color: white;
+    padding: 25px;
+}
+
+#discard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#discard p {
+    margin-top: 0;
+}
+
+#clearDiscard {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImage {
+    width: 100px;
+}
+
+.footer {
+    background-color: #333;
+    color: #aaa;
+}
+
+.footer-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20%;
+}
+
+.footer-link {
+    color: #a9a;
+}
+
+.footer-link:visited {
+    color: #aaa;
+}
+
+.footer-link:hover, .footer-link:visited:hover {
+    color: #555;
+    text-decoration: none;
+}
+
+.p-long {
+    visibility: collapse;
+    padding: 0;
+    height: 0;
+    margin: 0;
+}
+
+.p-short a {
+    text-decoration: underline;
+}
+
+.emptyMessage {
+    height: 139px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .p-long {
+        visibility: visible;
+    }
+
+    .p-short {
+        visibility: collapse;
+    }
+
+    .page-container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .cardImage {
+        width: 200px;
+    }
+
+    #cards {
+        padding-right: 150px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .handCard {
+        width: 50px;
+    }
+
+    .emptyMessage {
+        height: 278px;
+        width: 200px;
+    }
+
+}

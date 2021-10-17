@@ -72,7 +72,7 @@ document.getElementById("gameSubmit").addEventListener("click", function(event) 
         cards = cards.sort((card1, card2) => CARD_VALUES[card1.value] - CARD_VALUES[card2.value]);
         for (let card of cards) {
             console.log(card);
-            results += '<img src="' + card.image + '" class="cardImage" id="' + card.code + '" alt="' + card.code + '"/>';
+            results += '<div class="handCard" id="'+card.code+'-div"><img src="' + card.image + '" class="cardImage" id="' + card.code + '" alt="' + card.code + '"/></div>';
         }
         removeForm();
         refresh(deckId);
@@ -182,7 +182,7 @@ async function playCard(deckID, code) {
             fetch(url).then(function (response) {
                 return response.json();
             }).then(function (json) {
-                document.getElementById(code).remove();
+                document.getElementById(code+"-div").remove();
                 refresh(deckID);
                 document.getElementById("errorMessage").innerText = '';
             });
@@ -204,6 +204,8 @@ function refresh(deckID) {
             let card = cards[cards.length-1];
             if (card !== undefined) {
                 innerHTML += '<img src="' + card.image + '" class="cardImage" id="' + card.code + '" alt="' + card.code + '"/>';
+            } else {
+                innerHTML += '<div class="emptyMessage"><p>(Empty)</p></div>'
             }
         }
         innerHTML += '<p>(Click to refresh)</p>';

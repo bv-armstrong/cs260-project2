@@ -4,37 +4,81 @@
   <meta charset="UTF-8">
   <meta name='viewport'
         content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
-  <title>Title</title>
+  <title>Scum Game - bv-armstrong.com</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <div class="header">
+    <h2 class="pageTitle">SCUM - Game</h2>
+  </div>
+
+
+  <div class="page-container">
+    <div id="entryForms">
+      <form id="joinGameForm">
+        <h2 class="form-title">Join game</h2>
+        <div class="form-row">
+          <label for="gameInput">Enter game ID</label>
+          <input class="text-input" id="gameInput" type="text"/>
+        </div>
+        <div class="form-row">
+          <label for="playerNumber">Player Number (1, 2, etc.)</label>
+          <input class="numberInput" id="playerNumber" type="number" min="1" max="6"/>
+        </div>
+        <input class="button" id="gameSubmit" type="submit" value="Go"/>
+      </form>
+
+      <form id="createGameForm">
+        <h2 class="form-title">Start a new game</h2>
+        <div class="form-row">
+          <label for="numPlayers">Number of Players</label>
+          <input class="numberInput" id="numPlayers" type="number" min="3" max="6"/>
+        </div>
+        <input class="button" id="createNewGame" type="submit" value="Create Game"/>
+      </form>
+    </div>
+
+    <div id="gameId"></div>
+
+    <div id="discard"></div>
+    <div id="clearDiscard"></div>
+
+    <h2 id="errorMessage"></h2>
+    <div id="cards"></div>
+
+    <div class="instructions">
+      <p>Instructions:</p>
+      <ul>
+        <li>2 of clubs starts.</li>
+        <li>Play proceeds clockwise. Each play must either play a card higher, or pass.</li>
+        <li>If all players pass, the deck is cleared (player 1 must clear the deck). Whoever played the last card may
+          then
+          starts with any card from their hand.
+        </li>
+        <li>First player to play all cards wins. Play may continue until all hands have been played.</li>
+      </ul>
+      <p>Note: Due to restrictions of the API used to mange the deck, it is up to the players to maintain order. As
+        such,
+        playing in-person is recommended.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-content">
+      <p>©2021 Bryson Armstrong</p>
+      <p class="p-long">GitHub Source Code:
+        <a class="footer-link"
+           href="https://github.com/bv-armstrong/cs260-project2">
+          https://github.com/bv-armstrong/cs260-project2
+        </a>
+      </p>
+      <p class="p-short"><a class="footer-link"
+                            href="https://github.com/bv-armstrong/cs260-project2">GitHub</a></p>
+    </div>
+  </div>
 
 </body>
-<div id="entryForms">
-  <form id="joinGameForm">
-    <label for="gameInput">Enter game ID</label>
-    <input id="gameInput" type="text"/>
-    <label for="playerNumber">Player Number (1, 2, etc.)</label>
-    <input id="playerNumber" type="number" min="1" max="6"/>
-    <input id="gameSubmit" type="submit" value="Go"/>
-  </form>
-
-  <form id="createGameForm">
-    <label for="numPlayers">Number of Players</label>
-    <input id="numPlayers" type="number" min="3" max="6"/>
-    <input id="createNewGame" type="submit" value="Create Game"/>
-  </form>
-</div>
-
-<div id="gameId"></div>
-
-<div id="discard"></div>
-<div id="clearDiscard"></div>
-
-<h2 id="errorMessage"></h2>
-<div id="cards">
-
-</div>
-
 <script src="/script.js"></script>
 
 </html>
