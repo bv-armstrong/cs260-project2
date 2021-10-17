@@ -51,6 +51,7 @@ document.getElementById("createNewGame").addEventListener("click", function(even
         setGameIDField(deckId);
     }).catch(function () {
         console.log("error");
+        document.getElementById("errorMessage").innerText = 'An error occurred. Perhaps you entered the wrong game ID?';
     })
 })
 
@@ -112,6 +113,7 @@ document.getElementById("gameSubmit").addEventListener("click", function(event) 
         setImageEventHandlers(deckId);
     }).catch(function () {
         console.log("error");
+        document.getElementById("errorMessage").innerText = 'An error occurred. Perhaps you entered the wrong game ID?';
     });
 })
 

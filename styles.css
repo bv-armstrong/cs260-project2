@@ -33,6 +33,7 @@ body {
 
 #entryForms {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     background-color: #015b01;
@@ -69,7 +70,7 @@ form {
 }
 
 #errorMessage {
-    color: #960303;
+    color: #670000;
 }
 
 .instructions {
@@ -196,7 +197,7 @@ input {
     }
 
     .page-container {
-        width: 75%;
+        width: 85%;
         margin: 0 auto;
     }
 
